@@ -25,6 +25,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+//catch form submit
+
+app.post("/", (req, res) => {
+  res.send(req.body);
+  console.log(req.body);
+});
+
 const port = 3000;
 
 app.listen(port, () => {
